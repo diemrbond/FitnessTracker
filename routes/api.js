@@ -1,5 +1,5 @@
 const router = require("express").Router();
-// const Transaction = require("../models/workouts.js");
+const Workout = require("../models/workouts.js");
 
 // router.post("/api/transaction", ({ body }, res) => {
 //   Transaction.create(body)
@@ -21,15 +21,15 @@ const router = require("express").Router();
 //     });
 // });
 
-// router.get("/api/transaction", (req, res) => {
-//   Transaction.find({})
-//     .sort({ date: -1 })
-//     .then(dbTransaction => {
-//       res.json(dbTransaction);
-//     })
-//     .catch(err => {
-//       res.status(400).json(err);
-//     });
-// });
+router.get("/workouts", (req, res) => {
+    Workout.find({})
+        .sort({ date: -1 })
+        .then(dbTransaction => {
+            res.json(dbTransaction);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+});
 
 module.exports = router;
