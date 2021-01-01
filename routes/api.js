@@ -14,9 +14,7 @@ router.post("/workouts", ({ body }, res) => {
 router.put("/workouts/:id", ({ body, params }, res) => {
     Workout.findByIdAndUpdate(
         params.id,
-
-        { $push: { exercises: body } },
-    )
+        { $push: { exercises: body } })
         .then((dbWorkout) => {
             res.json(dbWorkout);
         })
@@ -24,16 +22,6 @@ router.put("/workouts/:id", ({ body, params }, res) => {
             res.json(error);
         });
 });
-
-// router.post("/api/transaction/bulk", ({ body }, res) => {
-//   Transaction.insertMany(body)
-//     .then(dbTransaction => {
-//       res.json(dbTransaction);
-//     })
-//     .catch(err => {
-//       res.status(400).json(err);
-//     });
-// });
 
 router.get("/workouts/range", (req, res) => {
     Workout.find({})
