@@ -1,8 +1,12 @@
+// REQUIREMENTS
 const mongoose = require("mongoose");
 
+// CREATE SCHEMA
 const Schema = mongoose.Schema;
 
+// WORKOUT SCHEMA
 const workoutSchema = new Schema({
+
     day: {
         type: Date,
         default: Date.now
@@ -35,20 +39,23 @@ const workoutSchema = new Schema({
         }
     }]
 },
-{
-    toJSON: {
-        virtuals: true
-    }
-});
+    {
+        toJSON: {
+            virtuals: true
+        }
+    });
 
-workoutSchema.virtual('totalDuration').get(function() {
+// CALCULATE TOTAL DURATION
+workoutSchema.virtual('totalDuration').get(function () {
     let total = 0;
-    for (var i=0; i<this.exercises.length; i++){
+    for (var i = 0; i < this.exercises.length; i++) {
         total += this.exercises[i].duration;
     }
-   return total;
-  });
+    return total;
+});
 
+// CREATE WORKOUT
 const Workout = mongoose.model("Workout", workoutSchema);
 
+// EXPORTS
 module.exports = Workout;

@@ -1,6 +1,8 @@
+// REQUIREMENTS
 const router = require("express").Router();
 const Workout = require("../models/workouts.js");
 
+// POST NEW WORKOUT
 router.post("/workouts", ({ body }, res) => {
     Workout.create(body)
         .then(dbWorkout => {
@@ -11,6 +13,7 @@ router.post("/workouts", ({ body }, res) => {
         });
 });
 
+// UPDATE WORKOUT
 router.put("/workouts/:id", ({ body, params }, res) => {
     Workout.findByIdAndUpdate(
         params.id,
@@ -23,6 +26,7 @@ router.put("/workouts/:id", ({ body, params }, res) => {
         });
 });
 
+// GET ALL WORKOUTS
 router.get("/workouts/range", (req, res) => {
     Workout.find({})
         .sort({ date: -1 })
@@ -34,6 +38,7 @@ router.get("/workouts/range", (req, res) => {
         });
 });
 
+// GET LATEST WORKOUT
 router.get("/workouts", (req, res) => {
     Workout.find({})
         .sort({ date: -1 })
@@ -45,4 +50,5 @@ router.get("/workouts", (req, res) => {
         });
 });
 
+// EXPORTS
 module.exports = router;
