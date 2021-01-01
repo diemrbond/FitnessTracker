@@ -1,57 +1,72 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Fitness Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+## Description 
+  For this project, we created a workout fitness tracker. The front end was provided, but the express server, mongoose routes and schema along with a mongo database were all required to be created. 
+  
+  ``As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.``
 
-## User Story
+<br>
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+<img src="assets/img/screenshot1.JPG" width="600" /> <br>
 
-## Business Context
+<img src="assets/img/screenshot2.JPG" width="600" /> <br>
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
 
-## Acceptance Criteria
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+  ---
+  ## Project Deployed
+  To view this project working, visit https://andrewisfit.herokuapp.com/ 
+    
 
-The user should be able to:
+  ---
+  ## Table of Contents
 
-  * Add exercises to a previous workout plan.
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Questions](#questions)
 
-  * Add new exercises to a new workout plan.
 
-  * View the combined weight of multiple exercises on the `stats` page.
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+  ---
+  ## Installation 
+  1. In gitbash, run `git clone https://github.com/diemrbond/FitnessTracker` 
+  2. Run `npm install` 
+  3. Ensure you have `mongod` running
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+  
+  ---
+  ## Usage 
+  1. Run `node server.js`
+  2. Open `http://localhost:3000/` in your browser
 
-## Commit Early and Often
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+  ---
+  ## License 
+  This application is licensed under: GNU GPLv3
+  
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-Follow these guidelines for committing:
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+  
+  ---
+  ## Questions
+  If you have any questions about this project, please feel free to contact me via the following information:
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+  <img src="https://avatars3.githubusercontent.com/u/32446328?v=4" width="50" />
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+  Andrew Kelleher
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+  Github: https://github.com/diemrbond
 
-## Submission on BCS
+  Email: [mrbondmustdie@gmail.com](mailto:mrbondmustdie@gmail.com)
 
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+  ---
+  © 2020 Andrew Kelleher | diemrbond.github.io
